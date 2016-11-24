@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="mdl/material.min.css">
+    <script src="mdl/material.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<style>
+    body {
+        background-color: #fdf6e3;
+        font-family: "Roboto", "Helvetica", sans-serif;
+        width: 95%;
+        height: 100%;
+        margin: auto
+    }
+    h1#title {
+        margin-bottom: 0
+    }
+    #main {
+        display: table;
+        height: 100%
+    }
+    #left-col, #right-col {
+        display: table-cell
+    }
+    #left-col {
+        padding-right: 35px;
+        border-right: 2px dashed #657b83
+    }
+    #right-col {
+        padding-left: 40px;
+    }
+</style>
+
+<body>
+    <div id="main">
+    <div id="left-col">
+        <h1 id="title">Irrationality Numbers</h1>
+        <p>v2.1.0 by PracticalPurposes, Ltd.</p>
+        <ul>
+            <li><code>/hashmap</code> and <code>/hashnum</code> accept letters only (case insensitive)</li>
+            <li><code>/irrnum</code> accepts numbers only</li>
+            <li><code>/repeat</code> runs the last solution through <code>/irrnum</code> again</li>
+        </ul>
+        <span id="input-field">String or number:&nbsp;&nbsp;
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                <input type="text" class="mdl-textfield__input" id="in">
+                <label for="in" class="mdl-textfield__label"></label>
+            </div>
+        </span>
+        <br />
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="hashmap" type="submit" value="/hashmap">/hashmap</button>&nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="irrnum" type="submit" value="/irrnum">/irrnum</button>&nbsp;
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="hashnum" type="submit" value="/hashnum">/hashnum</button>
+        <br>
+        <h3><div id="out"></div></h3>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="repeat" type="submit" value="/repeat">/repeat</button>
+        <br>
+    </div>
+    <div id="right-col">
+        <h3>History</h3>
+        <div id="history"></div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="reset" type="submit" value="/reset">Clear history</button>
+    </div>
+    </div>
+</body>
+
+</html>
